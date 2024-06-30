@@ -12,10 +12,10 @@ def hello_api(request):
         geolocation_url = f"https://api.ipgeolocation.io/ipgeo?apiKey={geolocation_api_key}&ip={client_ip}"
         geolocation_response = requests.get(geolocation_url)
         geolocation_data = geolocation_response.json()
-        city = geolocation_data.get("city", "New York")
+        city = geolocation_data.get("city", "Lagos")
     except requests.RequestException as e:
         print(f"Geolocation API request failed: {e}")
-        city = "New York"
+        city = "Lagos"
     
     try:
         weather_url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={weather_api_key}&units=metric"
