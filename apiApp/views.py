@@ -3,7 +3,7 @@ from django.http import JsonResponse
 from django.utils import timezone
 
 def hello_api(request):
-    visitor_name = request.GET.get('visitor_name', 'World')
+    visitor_name = request.GET.get('visitor_name', 'Mark')
     client_ip = request.META.get('REMOTE_ADDR')
     geolocation_api_key = "632b759811ba4551b28621a0cd96b7eb"
     weather_api_key = "30d3ed10ba347bfeaf1a468b825f6b83"
