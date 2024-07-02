@@ -36,7 +36,7 @@ def hello_api(request):
         'client_ip': client_ip,
         'location': city,
         'greeting': greeting,
-        'server_time': timezone.now().isoformat()
+        #'server_time': timezone.now().isoformat()
     }
     
     return JsonResponse(response_data)
